@@ -1539,12 +1539,7 @@ ul.seo_notice li {
 #okay_logo img {
     max-width: 100%;
 }
-.license_info {
-    margin: 10px 0;
-    line-height: 1.3;
-    color: #243541;
-    font-size: 12px;
-}
+
 .curr_info{
     display: block;
     float: left;
