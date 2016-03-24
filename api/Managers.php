@@ -6,8 +6,8 @@ class Managers extends Okay {
     
     public $permissions_list = array('products', 'categories', 'brands', 'features', 'orders', 'labels',
         'users', 'groups', 'coupons', 'pages', 'blog', 'comments', 'feedbacks', 'import', 'export',
-        'stats', 'design', 'settings', 'currency', 'delivery', 'payment', 'managers', 'license', 'languages',
-        'banners', 'special', 'callbacks', 'topvisor'
+        'stats', 'design', 'settings', 'currency', 'delivery', 'payment', 'managers', 'languages',
+        'backup', 'banners', 'special', 'callbacks', 'topvisor'
         
     );
 

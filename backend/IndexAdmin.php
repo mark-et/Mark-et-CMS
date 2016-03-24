@@ -42,6 +42,7 @@ class IndexAdmin extends Okay {
         
         'ImportAdmin'         => 'auto',
         'ExportAdmin'         => 'auto',
+		'BackupAdmin'         => 'auto',
         
         'StatsAdmin'            => 'stats',
         'ReportStatsAdmin'      => 'stats',
@@ -55,9 +56,9 @@ class IndexAdmin extends Okay {
         'ImagesAdmin'           => 'design',
         
         'BannersAdmin'          => 'banners',
-	'BannerAdmin'           => 'banners',
-	'BannersImagesAdmin'    => 'banners',
-	'BannersImageAdmin'     => 'banners',
+		'BannerAdmin'           => 'banners',
+		'BannersImagesAdmin'    => 'banners',
+		'BannersImageAdmin'     => 'banners',
         
         'SettingsAdmin'         => 'settings',
         'CurrencyAdmin'         => 'settings',
@@ -102,6 +103,7 @@ class IndexAdmin extends Okay {
         'FeedbacksAdmin'      => 'feedbacks',
         'ImportAdmin'         => 'import',
         'ExportAdmin'         => 'export',
+		'BackupAdmin'         => 'backup',
         'StatsAdmin'          => 'stats',
         'ThemeAdmin'          => 'design',
         'StylesAdmin'         => 'design',
@@ -117,9 +119,9 @@ class IndexAdmin extends Okay {
         'ManagerAdmin'          => 'managers',
         'SubscribeMailingAdmin' => 'users',
         'BannersAdmin'          => 'banners',
-	'BannerAdmin'           => 'banners',
-	'BannersImagesAdmin'    => 'banners',
-	'BannersImageAdmin'     => 'banners',
+		'BannerAdmin'           => 'banners',
+		'BannersImagesAdmin'    => 'banners',
+		'BannersImageAdmin'     => 'banners',
         'SpecialAdmin'          => 'special',
         'CallbacksAdmin'        => 'callbacks',
         

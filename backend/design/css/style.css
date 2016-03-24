@@ -1532,14 +1532,10 @@ ul.seo_notice {
 ul.seo_notice li {
     height: 26px;
 }
-#okay_logo {
-    padding: 14px 0px 7px;
-    text-align: center;
+#logo {
+    width: 230px;
+	height: 50px;
 }
-#okay_logo img {
-    max-width: 100%;
-}
-
 .curr_info{
     display: block;
     float: left;

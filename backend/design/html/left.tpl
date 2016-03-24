@@ -1,7 +1,5 @@
 
-<div id="okay_logo">
-     <a href='index.php?module=SettingsAdmin'><img src="design/images/logo.png" alt="OkayCMS"/></a>
-</div>
+<div id="logo"></div>
 
 <ul id="main_menu">
 
