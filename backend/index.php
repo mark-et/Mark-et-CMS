@@ -33,11 +33,12 @@ if($backend->config->debug) {
     print "\r\n<!--\r\n";
     $i = 0;
     $sql_time = 0;
-    foreach($page->db->queries as $q) {
-        $i++;
-        print "$i.\t$q->exec_time sec\r\n$q->sql\r\n\r\n";
-        $sql_time += $q->exec_time;
-    }
+    if (count($page->db->queries)>0)
+        foreach($page->db->queries as $q) {
+            $i++;
+            print "$i.\t$q->exec_time sec\r\n$q->sql\r\n\r\n";
+            $sql_time += $q->exec_time;
+        }
     
     $time_end = microtime(true);
     $exec_time = $time_end-$time_start;
