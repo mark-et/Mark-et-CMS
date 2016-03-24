@@ -1,23 +1,21 @@
 ;<? exit(); ?>
 
-license = y7cfgr9qvv idwptlsxfs qikmoyrnpt putxvrtpx1 vovyvpddnv w9uqox9hwk fzmnlrjzmf nrwqopmvqt wnyylrmurw zdvxrdud9y az79on8kzn 9eyzenailo hzpxisjlmp ouzpwjlbs5 mhp6qqwpyf yttd8j9vrv gosllkhncz onmutmrsmr qzjby2ozs8 vpt7
-
 [database]
 
 ;Сервер базы данных
 db_server = "localhost"
 
 ;Пользователь базы данных
-db_user = "root"
+db_user = "root";
 
 ;Пароль к базе
-db_password = ""
+db_password = "";
 
 ;Имя базы
-db_name = "okaycms-git"
+db_name = "database";
 
 ;Префикс для таблиц
-db_prefix = s_;
+db_prefix = "s_";
 
 ;Кодировка базы данных
 db_charset = UTF8;
@@ -40,6 +38,7 @@ php_locale_time = ru_RU;
 ;php_timezone = Europe/Moscow;
 
 logfile = admin/log/log.txt;
+debug = 1;
 
 [smarty]
 
