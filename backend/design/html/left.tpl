@@ -1,6 +1,6 @@
 
 <div id="okay_logo">
-     <a href='index.php?module=LicenseAdmin'><img src="design/images/logo.png" alt="OkayCMS"/></a>
+     <a href='index.php?module=SettingsAdmin'><img src="design/images/logo.png" alt="OkayCMS"/></a>
 </div>
 
 <ul id="main_menu">
@@ -239,16 +239,3 @@
 		<a href="{url lang_id=$l->id}" {if $l->id == $lang_id}class="selected"{/if}>{$l->label}</a>
 {/foreach}
 </div>
-<div class="license_info">
-{if in_array('license', $manager->permissions)}
-	{if $license->valid}
-		<span><a href='index.php?module=LicenseAdmin'>Лицензия</a> действительна {if $license->expiration != '*'}до {$license->expiration}{/if} для домен{$license->domains|count|plural:'а':'ов'} {foreach $license->domains as $d}{$d}{if !$d@last}, {/if}{/foreach}.</span>
-		
-	{else}
-		<span><a href='index.php?module=LicenseAdmin'>Лицензия</a> недействительна.</span>
-	{/if}
-{/if}
-</div>
-
-
-
