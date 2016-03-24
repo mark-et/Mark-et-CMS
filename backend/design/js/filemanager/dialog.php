@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 @session_start();
 
 chdir('../../../..');
@@ -16,6 +17,9 @@ else
 }
 
 //$config = include 'config/config.php';
+=======
+$config = include 'config/config.php';
+>>>>>>> parent of 74ffeb6... OkayCMS 1.1.10
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
 
