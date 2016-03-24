@@ -372,8 +372,11 @@ class Database extends Okay {
     	while($row = $result->fetch_row())
     	{
     		if($row[1] == 'BASE TABLE')
+			{
+				if ($row[0] == $this->config->db_prefix."managers") continue;
     			$this->dump_table($row[0], $h);
-    	}
+			}
+		}
         fclose($h);
     }
     
@@ -469,5 +472,4 @@ class Database extends Okay {
     	}
     	fwrite($h, "\n");
     }
-    
 }
