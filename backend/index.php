@@ -4,7 +4,7 @@ chdir('..');
 
 // Засекаем время
 $time_start = microtime(true);
-session_start();
+@session_start();
 $_SESSION['id'] = session_id();
 
 @ini_set('session.gc_maxlifetime', 86400); // 86400 = 24 часа
@@ -13,9 +13,9 @@ $_SESSION['id'] = session_id();
 require_once('backend/IndexAdmin.php');
 
 // Кеширование в админке нам не нужно
-Header("Cache-Control: no-cache, must-revalidate");
-header("Expires: -1");
-Header("Pragma: no-cache");
+@header("Cache-Control: no-cache, must-revalidate");
+@header("Expires: -1");
+@header("Pragma: no-cache");
 
 $backend = new IndexAdmin();
 
@@ -30,7 +30,7 @@ print $backend->fetch();
 
 // Отладочная информация
 if($backend->config->debug) {
-    print "<!--\r\n";
+    print "\r\n<!--\r\n";
     $i = 0;
     $sql_time = 0;
     foreach($page->db->queries as $q) {
