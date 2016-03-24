@@ -53,8 +53,8 @@
 	{/foreach}
 
 	{* Иконка сайта *}
-	<link href="design/{$settings->theme}/images/favicon.png" type="image/x-icon" rel="icon"/>
-	<link href="design/{$settings->theme}/images/favicon.png" type="image/x-icon" rel="shortcut icon"/>
+	<link href="design/{$settings->theme}/images/favicon.ico" type="image/x-icon" rel="icon"/>
+	<link href="design/{$settings->theme}/images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
 
 	{* JQuery *}
 	<script src="design/{$settings->theme}/js/jquery-2.1.4.min.js"></script>
@@ -404,7 +404,7 @@
 </div>
 {* Копирайт *}
 <div class="container p-y-1">
-	© {$smarty.now|date_format:"%Y"}. <a class="link-black" href="http://okay-cms.com" target="_blank"><span data-language="{$translate_id['index_copyright']}">{$lang->index_copyright}</span></a>
+	© {$smarty.now|date_format:"%Y"}. <a class="link-black" href="#" target="_blank"><span data-language="{$translate_id['index_copyright']}">{$lang->index_copyright}</span></a>
 </div>
 {* Форма обратного звонка *}
 {include file='callback.tpl'}

@@ -58,7 +58,7 @@
 				</div>
 				{/if}
 				<div class="name cell">
-	 				<a href="files/backup/{$backup->name}">{$backup->name}</a>
+	 				<a href="index.php?module=BackupAdmin&download={$backup->name}">{$backup->name}</a>
 					({if $backup->size>1024*1024}{($backup->size/1024/1024)|round:2} МБ{else}{($backup->size/1024)|round:2} КБ{/if})
 				</div>
 				<div class="icons cell">

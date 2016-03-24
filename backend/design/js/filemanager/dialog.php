@@ -1,36 +1,18 @@
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
 @session_start();
 
-=======
-session_start();
->>>>>>> refs/remotes/OkayCMS/master
 chdir('../../../..');
 require_once('api/Okay.php');
 
 $okay = new Okay();
 $manager = $okay->managers->get_manager();
-<<<<<<< HEAD
-if ($manager) {
-	chdir('backend/design/js/filemanager/');
-	$config = include 'config/config.php';
-}
-else
-{
-	die();
-}
 
-//$config = include 'config/config.php';
-=======
-=======
 if (!$manager) {
 	die();
 }
 chdir('backend/design/js/filemanager/');
->>>>>>> refs/remotes/OkayCMS/master
+
 $config = include 'config/config.php';
->>>>>>> parent of 74ffeb6... OkayCMS 1.1.10
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
 

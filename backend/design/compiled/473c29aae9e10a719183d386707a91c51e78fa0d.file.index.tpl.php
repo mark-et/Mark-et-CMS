@@ -1,10 +1,40 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.18, created on 2016-03-24 19:56:49
+         compiled from "backend\design\html\index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3261656f4468168aab0-02418845%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '473c29aae9e10a719183d386707a91c51e78fa0d' => 
+    array (
+      0 => 'backend\\design\\html\\index.tpl',
+      1 => 1458846165,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '3261656f4468168aab0-02418845',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'meta_title' => 0,
+    'config' => 0,
+    'lang_link' => 0,
+    'content' => 0,
+    'manager' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_56f44681721207_10332797',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_56f44681721207_10332797')) {function content_56f44681721207_10332797($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <META HTTP-EQUIV="Expires" CONTENT="-1">
-    <title>{$meta_title}</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['meta_title']->value;?>
+</title>
     <link rel="icon" href="design/images/favicon.ico" type="image/x-icon">
     <link href="design/css/style.css" rel="stylesheet" type="text/css" />
     <script src="design/js/jquery/jquery.js"></script>
@@ -15,11 +45,7 @@
 
 </head>
 <body>
-{if $smarty.get.module == "ProductAdmin"
-    || $smarty.get.module == "CategoryAdmin"
-    || $smarty.get.module == "BrandAdmin"
-    || $smarty.get.module == "PostAdmin"
-    || $smarty.get.module == "PageAdmin"}
+<?php if ($_GET['module']=="ProductAdmin"||$_GET['module']=="CategoryAdmin"||$_GET['module']=="BrandAdmin"||$_GET['module']=="PostAdmin"||$_GET['module']=="PageAdmin") {?>
 <script>
     $(window).on("load", function() {
         var title = $("input[name='meta_title']"),
@@ -57,26 +83,34 @@
         });
     });
 </script>
-{/if}
-<a href='{$config->root_url}/{$lang_link}' class='admin_bookmark'></a>
+<?php }?>
+<a href='<?php echo $_smarty_tpl->tpl_vars['config']->value->root_url;?>
+/<?php echo $_smarty_tpl->tpl_vars['lang_link']->value;?>
+' class='admin_bookmark'></a>
 
 <div class="container">
 
     <div class="left">
-        {include file="left.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("left.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
     </div>
 
     <div id="main">
         <ul id="tab_menu">
-            {$smarty.capture.tabs}
+            <?php echo Smarty::$_smarty_vars['capture']['tabs'];?>
+
         </ul>
         <div id="middle">
-            {$content}
+            <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
         </div>
         <div id="footer">
-            <span>&copy; 2016</span> Okay {$config->version}
-            <span>Вы вошли как {$manager->login}.</span>
-            <a href='{$config->root_url}?logout' id="logout">Выход</a>
+            <span>&copy; 2016</span> Okay <?php echo $_smarty_tpl->tpl_vars['config']->value->version;?>
+
+            <span>Вы вошли как <?php echo $_smarty_tpl->tpl_vars['manager']->value->login;?>
+.</span>
+            <a href='<?php echo $_smarty_tpl->tpl_vars['config']->value->root_url;?>
+?logout' id="logout">Выход</a>
         </div>
     </div>
 </div>
@@ -84,3 +118,4 @@
  <link href="design/css/styles.css" rel="stylesheet" type="text/css" />
 </html>
 
+<?php }} ?>

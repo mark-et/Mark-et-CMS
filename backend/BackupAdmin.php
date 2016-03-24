@@ -1,17 +1,17 @@
 <?PHP
-
 define( 'PCLZIP_TEMPORARY_DIR', 'backend/files/backup/' );
 
 require_once('api/Okay.php');
-require_once('backend/pclzip/pclzip.lib.php');
+require_once('lib/pclzip/pclzip.lib.php');
 
 class BackupAdmin extends Okay
 {
  
 	public function fetch()
 	{
-	
+		// Путь к директории с резервными копиями
 		$dir = 'backend/files/backup/';
+		
 		// Обработка действий
 		if($this->request->method('post'))
 		{
@@ -67,16 +67,36 @@ class BackupAdmin extends Okay
 					}
 			        break;
 			    }
-			    case 'delete':
+				case 'delete':
 			    {
 			    	$names = $this->request->post('check');
 				    foreach($names as $name)
 						unlink($dir.$name);   
 			        break;
 			    }
-			}				
+			}			
 		}
-
+		// Запрос загрузки бекапа
+		else if($this->request->method('get'))
+		{
+			$file = $this->request->get('download', 'string');
+			
+			// Фильтрация запроса
+			$file = preg_replace("/[^A-Za-z0-9\._]+/", "", $file);
+			
+			if (!empty($file))
+			{
+				$filename = $this->config->root_dir.$dir.$file;
+				if (@file_exists($filename))
+				{
+					header("Content-type: application/force-download");
+					header("Content-Disposition: attachment; filename=\"$file\"");
+					header("Content-Length: ".filesize($filename));
+					readfile($filename);	
+				}
+				exit();
+			}
+		}
 		$backup_files = glob($dir."*.zip");
 		$backups = array();
 		if(is_array($backup_files))
